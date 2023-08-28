@@ -1,81 +1,91 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Hunting API</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<!-- font -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-    .poppins-font{
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    .card{
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .poppins-font {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .card {
         padding-top: 30px;
         border-radius: 0px;
         background: #ffffff;
-    }
-    .card-body{
+      }
+      .card-body {
         align-items: center;
         padding-bottom: 20px;
-    }
-    .card-title{
+      }
+      .card-title {
         font-size: x-large;
         margin-bottom: 8px;
-    }
-   .card-detail{
-    text-align: center;
-    margin-bottom: 8px;
-   }
-   .price{
+      }
+      .card-detail {
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      .price {
         font-size: 20px;
         font-weight: 500;
         margin-bottom: 8px;
-    }
-    .img-bg{
+      }
+      .img-bg {
         background-color: #0d6efd0d;
         padding: 30px;
         margin-left: 10px;
         margin-right: 10px;
-        
-    }
-    .btn{
+      }
+      .btn {
         background-color: rgb(0, 102, 255);
         color: white;
-    }
-    
-
-</style>
-</head>
-<body class=".poppins-font">
+      }
+    </style>
+  </head>
+  <body class=".poppins-font">
     <header>
-        <h1 class="text-5xl text-center mt-5 font-medium">Phone Hunter</h1>
+      <h1 class="text-5xl text-center mt-5 font-medium">Phone Hunter</h1>
     </header>
-    <main  class="w-3/4 mx-auto mt-10">
+    <main class="w-3/4 mx-auto mt-10">
+      <!-- search section -->
+      <section class="text-center mb-8">
+        <input
+          id="searchField"
+          type="text"
+          placeholder=" Search your phone"
+          class="bg-slate-100 input input-bordered w-full max-w-md"
+        />
+        <button onclick="handleSearch()" class="btn px-10">Search</button>
+      </section>
 
-        <!-- search section -->
-        <section class="text-center mb-8">
-            <input id="searchField" type="text" placeholder=" Search your phone" class="bg-slate-100 input input-bordered w-full max-w-md" />
-            <button onclick="handleSearch()" class="btn px-10">Search</button>
-        </section>
-
-        <!-- search result in card section -->
-        <!-- card section -->
-        <section>
-            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-            </div>
-        </section>
-
+      <!-- search result in card section -->
+      <!-- card section -->
+      <section class="text-center">
+        <div
+          id="phone-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        ></div>
+        <!-- show all button -->
+        <div id="show-all-container" class="hidden">
+          <button class="btn px-10 mt-6">Show ALl</button>
+        </div>
+      </section>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
     <script src="./js/phone.js"></script>
-</body>
+  </body>
 </html>
