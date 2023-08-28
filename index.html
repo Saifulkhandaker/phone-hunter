@@ -72,9 +72,14 @@
         <button onclick="handleSearch()" class="btn px-10">Search</button>
       </section>
 
+
       <!-- search result in card section -->
       <!-- card section -->
       <section class="text-center">
+        <!-- loading spinner -->
+        <div id="spinner" class="hidden">
+            <span class="loading loading-dots text-info"></span>
+        </div>
         <div
           id="phone-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
