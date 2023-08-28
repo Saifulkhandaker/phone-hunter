@@ -93,7 +93,7 @@ const showPhoneDetails = (phone) => {
   <h4><span class="section details">Slug:</span> ${phone?.slug} </h4>
   <h4><span class="section details">Realese Date:</span> ${phone?.releaseDate} </h4>
   <h4><span class="section details">Brand:</span> ${phone?.brand} </h4>
-  <h4><span class="section details">Gps:</span> ${phone?.others?.GPS} </h4>
+  <h4><span class="section details">Gps:</span> ${phone?.others?.GPS ||'NO Gps available'} </h4>
   `;
   // show the modal
   show_details_modal.showModal();
